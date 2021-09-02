@@ -1,0 +1,47 @@
+---
+title: 'Lesson Plan: 1.0'
+author: "DCB"
+date: "9/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Create an R chunk and 
+load library for tidyverse
+
+1) Using the green +c tab to create an r chunk , create empty chunk
+
+2) add the below lines of code in chunk
+ (note this has optional code to check to see if the tidyverse package is installed and to install it if necessary. This is advanced programing, not necessary)
+ 
+3) execute chunk (green right arrow at top of chunk)
+
+```{r}
+if("tidyverse" %in% rownames(installed.packages()) == FALSE) {
+  install.packages("tidyverse")
+}
+library(tidyverse)
+```
+### Use formating to show off
+> Make complex sounding mission statement which actually says nothing, just like the big time politicians. 
+
+
+Access the built in mpg datafile and view it
+```{r}
+data(mpg)
+View(mpg)
+```
+
+Do a simple plot of engine displacement vs highway mpg
+To make code easy, attach the dataframe 
+
+```{r}
+attach(mpg)
+plot(displ, hwy)
+```
+
+
+
